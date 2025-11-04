@@ -148,6 +148,10 @@
             </div>
         </div>
     </div>
+
+    <audio autoplay loop muted id="bgMusic">
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
 </body>
     <script src="https://app.embed.im/snow.js"></script>
     <!-- <script src="https://58bxf2.csb.app/"></script> -->
@@ -268,7 +272,11 @@
             fcMobile.timeout("03", document.querySelector(".month"))
         },6000)
     }
+
+    // Sau vài giây bật tiếng
+    setTimeout(() => {
+        document.getElementById("bgMusic").muted = false;
+    }, 2000);
     
 </script>
 </html>
-
